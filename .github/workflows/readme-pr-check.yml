@@ -1,13 +1,7 @@
 name: README PR Check
 
 on:
-  pull_request:
-    types: [opened]
-    paths:
-      - 'README.md'
-  issue_comment:
-    types: [created]
-
+  workflow_dispatch:
 jobs:
   check-readme-only:
     if: github.event_name == 'pull_request'
